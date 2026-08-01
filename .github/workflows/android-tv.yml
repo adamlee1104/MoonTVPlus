@@ -2,27 +2,27 @@ name: Build Android TV APK
 
 on:
   workflow_dispatch:
-    inputs:
-      base_url:
-        description: '服务端 Base URL，不需要带 /tv，例如 https://example.com 或 http://192.168.1.10:3000'
-        required: true
-        default: 'http://192.168.1.10:3000'
-        type: string
-      app_name:
-        description: 'Android TV 应用名称'
-        required: true
-        default: 'MoonTVPlus TV'
-        type: string
-      version_name:
-        description: '版本名'
-        required: false
-        default: '1.0.0'
-        type: string
-      version_code:
-        description: '版本号，必须是整数'
-        required: false
-        default: '1'
-        type: string
+  #  inputs:
+  #    base_url:
+  #      description: '服务端 Base URL，不需要带 /tv，例如 https://example.com 或 http://192.168.1.10:3000'
+  #      required: true
+  #      default: 'http://192.168.1.10:3000'
+  #      type: string
+  #    app_name:
+  #      description: 'Android TV 应用名称'
+  #      required: true
+  #      default: 'MoonTVPlus TV'
+  #      type: string
+  #    version_name:
+  #      description: '版本名'
+  #      required: false
+  #      default: '1.0.0'
+  #      type: string
+  #    version_code:
+  #      description: '版本号，必须是整数'
+  #      required: false
+  #      default: '1'
+  #      type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
