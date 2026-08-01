@@ -2,12 +2,12 @@ name: Build & Push Docker image
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Docker 标签'
-        required: false
-        default: 'latest'
-        type: string
+  #  inputs:
+  #    tag:
+  #      description: 'Docker 标签'
+  #      required: false
+  #      default: 'latest'
+  #      type: string
  # push:
  #   branches: [ main, master ]
  # pull_request:
