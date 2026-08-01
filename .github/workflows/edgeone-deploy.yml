@@ -2,25 +2,25 @@ name: Deploy to EdgeOne
 
 on:
   workflow_dispatch:
-    inputs:
-      project_name:
-        description: 'EdgeOne Pages 项目名'
-        required: false
-        default: 'moontvplus'
-        type: string
-      area:
-        description: '部署区域：overseas = 全球可用区（不含中国大陆），global = 全球可用区'
-        required: false
-        default: 'overseas'
-        type: choice
-        options:
-          - overseas
-          - global
-      sync_environment:
-        description: '部署后同步 GitHub Secrets 到 EdgeOne 环境变量，并再次部署使其生效'
-        required: false
-        default: true
-        type: boolean
+  #  inputs:
+  #    project_name:
+  #      description: 'EdgeOne Pages 项目名'
+  #      required: false
+  #      default: 'moontvplus'
+  #      type: string
+  #    area:
+  #      description: '部署区域：overseas = 全球可用区（不含中国大陆），global = 全球可用区'
+  #      required: false
+  #      default: 'overseas'
+  #      type: choice
+  #      options:
+  #        - overseas
+  #        - global
+  #    sync_environment:
+  #      description: '部署后同步 GitHub Secrets 到 EdgeOne 环境变量，并再次部署使其生效'
+  #      required: false
+  #      default: true
+  #      type: boolean
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
